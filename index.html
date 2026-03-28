@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>MQT_PivotConfluencePredictor – NinjaTrader 8 Indicator</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+  * {
+    margin: 0; padding: 0; box-sizing: border-box;
+  }
+  body {
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    background: #0a0a0a;
+    color: #e0e0e0;
+    line-height: 1.6;
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  header {
+    background: #000;
+    border-bottom: 2px solid #00ff00;
+    padding: 16px 0;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .brand img {
+    height: 64px;
+  }
+  .brand h1 {
+    color: #00ff00;
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+  .hero {
+    padding: 80px 0;
+    text-align: center;
+    background: linear-gradient(135deg, #000, #1a1a1a);
+    border-bottom: 3px solid #00ff00;
+  }
+  .hero h2 {
+    color: #00ff00;
+    font-size: 2.6rem;
+    margin-bottom: 18px;
+  }
+  .hero p {
+    max-width: 1050px;
+    margin: 0 auto 32px;
+    font-size: 1.15rem;
+    color: #b0b0b0;
+  }
+  .cta-button {
+    display: inline-block;
+    background: #00ff00;
+    color: #000;
+    padding: 14px 40px;
+    font-weight: 800;
+    border-radius: 5px;
+    text-decoration: none;
+    border: 2px solid #00ff00;
+  }
+  .cta-button:hover {
+    background: #000;
+    color: #00ff00;
+  }
+  .section-title {
+    text-align: center;
+    color: #00ff00;
+    font-size: 2.2rem;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  .screenshot-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    gap: 30px;
+    padding-bottom: 60px;
+  }
+  .screenshot-item {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 18px;
+  }
+  .screenshot-item img {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 12px;
+  }
+  .screenshot-item h3 {
+    text-align: center;
+    color: #00ff00;
+    margin-bottom: 6px;
+  }
+  .screenshot-item p {
+    text-align: center;
+    color: #9a9a9a;
+    font-size: 0.95rem;
+  }
+  .how {
+    padding: 60px 0;
+    background: #0f0f0f;
+  }
+  .steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+  }
+  .step {
+    background: #1a1a1a;
+    padding: 28px;
+    border-left: 4px solid #00ff00;
+    border-radius: 8px;
+  }
+  .step h3 {
+    color: #00ff00;
+    margin-bottom: 10px;
+  }
+  .step p {
+    color: #b0b0b0;
+  }
+  .settings {
+    padding: 60px 0;
+    background: #000;
+  }
+  .table-wrap {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  th,
+  td {
+    padding: 14px;
+    border-bottom: 1px solid #2a2a2a;
+  }
+  th {
+    background: #111;
+    color: #00ff00;
+    text-align: left;
+  }
+  td {
+    color: #cfcfcf;
+  }
+  td:first-child {
+    color: #00cc00;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .faq {
+    padding: 60px 0;
+    background: #0f0f0f;
+  }
+  .faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 24px;
+  }
+  .faq-item {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 22px;
+  }
+  .faq-item h3 {
+    color: #00ff00;
+    margin-bottom: 10px;
+  }
+  .faq-item p {
+    color: #b0b0b0;
+  }
+  footer {
+    background: #000;
+    border-top: 2px solid #00ff00;
+    padding: 30px 0;
+    text-align: center;
+    color: #666;
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <div class="brand">
+      <img src="https://cdn.abacus.ai/images/dba478de-fcb7-4535-8157-8cb7bf18c087.png" alt="myQuantrader Logo" />
+      <h1>MQT_PivotConfluencePredictor</h1>
+    </div>
+  </div>
+</header>
+<section class="hero">
+  <div class="container">
+    <h2>Advanced Pivot Confluence Predictor</h2>
+    <p>
+      MQT_PivotConfluencePredictor uses cycle, swing, Fibonacci, and multi-timeframe analysis with AutoTune and Learning to predict the next pivot confluence zone for NinjaTrader 8.
+    </p>
+    <a class="cta-button" href="#" onclick="alert('Add checkout URL here');return false;">Download Now</a>
+  </div>
+</section>
+<section class="screenshots">
+  <div class="container">
+    <h2 class="section-title">Chart Examples</h2>
+    <div class="screenshot-grid">
+      <div class="screenshot-item">
+        <img src="PC Chart 1.png" alt="Pivot Confluence Chart 1" />
+        <h3>Pivot Confluence Chart 1</h3>
+        <p>Shows pivot zones, learning summary, and projected arrows on price action.</p>
+      </div>
+      <div class="screenshot-item">
+        <img src="PC Chart 2.png" alt="Pivot Confluence Chart 2" />
+        <h3>Pivot Confluence Chart 2</h3>
+        <p>Detailed view of pivot hits, score panel, and learning events.</p>
+      </div>
+      <div class="screenshot-item">
+        <img src="PC Chart 3.png" alt="Pivot Confluence Chart 3" />
+        <h3>Pivot Confluence Chart 3</h3>
+        <p>Multi-timeframe swing and cycle analysis with projected pivot zones.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="how">
+  <div class="container">
+    <h2 class="section-title">How It Works</h2>
+    <div class="steps">
+      <div class="step">
+        <h3>1. Swing Detection</h3>
+        <p>Detects swing highs and lows using configurable swing strength and lookback.</p>
+      </div>
+      <div class="step">
+        <h3>2. Projection Analysis</h3>
+        <p>Combines multiple methods including Fibonacci, cycle, and measured moves to project future pivot zones.</p>
+      </div>
+      <div class="step">
+        <h3>3. AutoTune & Learning</h3>
+        <p>Adaptive settings based on market regime and ongoing learning from realized outcomes.</p>
+      </div>
+      <div class="step">
+        <h3>4. Visual Overlays</h3>
+        <p>Draws vertical pivot lines, price levels, and directional arrows with customizable colors and sizes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="settings">
+  <div class="container">
+    <h2 class="section-title">Indicator Settings</h2>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Category</th><th>Setting</th><th>Description</th></tr>
+        <tr><td>Swing Detection</td><td>Swing Strength</td><td>Bars on each side to confirm swing high/low.</td></tr>
+        <tr><td>Swing Detection</td><td>Lookback Swings</td><td>Number of prior swings used for analysis.</td></tr>
+        <tr><td>Cycle Analysis</td><td>Cycle Search Window</td><td>Max autocorrelation lag to find dominant cycle.</td></tr>
+        <tr><td>Projection</td><td>Projection Bars Ahead</td><td>Bars ahead to scan for confluence peak.</td></tr>
+        <tr><td>Projection</td><td>Min Confluence Score</td><td>Minimum score to draw a projection.</td></tr>
+        <tr><td>Display</td><td>Show Score Panel</td><td>Overlay score breakdown panel on chart.</td></tr>
+        <tr><td>Display</td><td>Show Learning Summary</td><td>Overlay learning summary panel.</td></tr>
+        <tr><td>Display</td><td>Learning Summary Max Events</td><td>Number of recent learning events to list.</td></tr>
+        <tr><td>Display</td><td>Use Infinite Price Line</td><td>True = infinite horizontal price line.</td></tr>
+        <tr><td>Display</td><td>Show Up Arrows</td><td>Toggle projected BUY/up arrows.</td></tr>
+        <tr><td>Display</td><td>Show Down Arrows</td><td>Toggle projected SELL/down arrows.</td></tr>
+        <tr><td>Display</td><td>Up Arrow Offset (ticks)</td><td>Ticks below projected price for Up arrow.</td></tr>
+        <tr><td>Display</td><td>Down Arrow Offset (ticks)</td><td>Ticks above projected price for Down arrow.</td></tr>
+        <tr><td>Display</td><td>Up Arrow Size</td><td>Marker size for Up arrow.</td></tr>
+        <tr><td>Display</td><td>Down Arrow Size</td><td>Marker size for Down arrow.</td></tr>
+        <tr><td>Display</td><td>Up Arrow Color</td><td>Color of Up arrow.</td></tr>
+        <tr><td>Display</td><td>Down Arrow Color</td><td>Color of Down arrow.</td></tr>
+        <tr><td>Display</td><td>Pivot Line Color</td><td>Color of pivot vertical lines.</td></tr>
+        <tr><td>Display</td><td>Price Line Color</td><td>Color of price horizontal lines.</td></tr>
+        <tr><td>Display Text Style</td><td>Panel Text Size</td><td>Font size for overlay text panels.</td></tr>
+        <tr><td>Display Text Style</td><td>Panel Text Color</td><td>Color of overlay text panels.</td></tr>
+        <tr><td>AutoTune</td><td>AutoTune Enabled</td><td>Adaptive settings based on volatility/trend regime.</td></tr>
+        <tr><td>AutoTune</td><td>Regime Update Every (bars)</td><td>Frequency to recompute regime and adjust settings.</td></tr>
+        <tr><td>AutoTune</td><td>Vol Low Threshold (ATR ratio)</td><td>ATR(14)/SMA(ATR,100) below this is quiet.</td></tr>
+        <tr><td>AutoTune</td><td>Vol High Threshold (ATR ratio)</td><td>ATR(14)/SMA(ATR,100) above this is hot.</td></tr>
+        <tr><td>AutoTune</td><td>Trend Threshold (ADX)</td><td>ADX(14) above this is trending.</td></tr>
+        <tr><td>Learning</td><td>Learning Enabled</td><td>Updates weights and thresholds from outcomes.</td></tr>
+        <tr><td>Learning</td><td>Train On Historical</td><td>Apply learning on historical bars.</td></tr>
+        <tr><td>Learning</td><td>Learning Start Date</td><td>Start date/time for historical learning.</td></tr>
+        <tr><td>Learning</td><td>Evaluation Horizon (bars)</td><td>Bars after projection to evaluate outcomes.</td></tr>
+        <tr><td>Learning</td><td>Pivot Tolerance (bars)</td><td>Pivot timing hit tolerance in bars.</td></tr>
+        <tr><td>Learning</td><td>Price Tolerance (ticks)</td><td>Price touch hit tolerance in ticks.</td></tr>
+        <tr><td>Learning</td><td>Learning Rate</td><td>Step size for weight/threshold updates.</td></tr>
+        <tr><td>Learning</td><td>EWMA Alpha</td><td>Smoothing for pivot/price accuracy.</td></tr>
+        <tr><td>Learning</td><td>Dual-Model Learner</td><td>Separate learners for pivot and price.</td></tr>
+        <tr><td>Learning</td><td>Reset Learned Each Session</td><td>Reset in-memory stats on realtime start.</td></tr>
+        <tr><td>Learning</td><td>Delete Learned File On Start</td><td>Delete persistence file on load.</td></tr>
+        <tr><td>Learning</td><td>Autosave Every (bars)</td><td>Save learned state every N bars.</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+<section class="faq">
+  <div class="container">
+    <h2 class="section-title">FAQ</h2>
+    <div class="faq-grid">
+      <div class="faq-item">
+        <h3>What does this indicator do?</h3>
+        <p>Predicts future pivot confluence zones using cycle, swing, Fibonacci, and multi-timeframe analysis.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Is it compatible with NinjaTrader 8?</h3>
+        <p>Yes, fully compatible and designed specifically for NinjaTrader 8.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can I customize the learning parameters?</h3>
+        <p>Yes, all learning and AutoTune parameters are configurable.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Does it repaint?</h3>
+        <p>No, it uses confirmed swing points and historical data for projections.</p>
+      </div>
+      <div class="faq-item">
+        <h3>Can I use it for multiple timeframes?</h3>
+        <p>Yes, it supports multi-timeframe analysis with multiple data series.</p>
+      </div>
+      <div class="faq-item">
+        <h3>How do I interpret the score panel?</h3>
+        <p>The score panel breaks down the weighted contributions of different methods to the projection score.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<footer>
+  <p>© 2026 myQuantrader.com — All Rights Reserved</p>
+</footer>
+</body>
+</html>
